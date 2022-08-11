@@ -42,7 +42,7 @@ The following are the variables used for this module.
 | byo_role_arn | String | "" | BYO codepipeline IAM role ARN.            |
 | policypath | String | " | Codepipeline IAM role policy path.             |
 | stages | list() | [] | This list describes each stage of the codebuild.            |
-| artifact_store | map | {} | Map to populate the artifact block. |
+| artifact_store | map | {} | Map to populate the artifact block. The creation of the artifact store not managed within the module. It needs to be created outside the module and pass the location ID/ARN to the module. |
 | kms_key_id | String | "" | The KMS key id that should be used to encrypt arteficts.             |
 | tags | Map | {} | AWS tags to be applied to created resources. |
 

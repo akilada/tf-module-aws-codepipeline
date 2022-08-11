@@ -1,6 +1,6 @@
 
 locals {
-  role_arn  = var.byo_iam_role ?  var.role_arn : aws_iam_role.pipeline.0.arn
+  role_arn  = var.byo_iam_role ?  var.byo_role_arn : aws_iam_role.pipeline.0.arn
   role_name = var.byo_iam_role ?  "" : "AWSCodePipelineServiceRole-${var.env}-${var.name}"
 }
 
